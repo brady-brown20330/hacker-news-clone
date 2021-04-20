@@ -21,11 +21,28 @@ const fetchPosts = (type) => {
   })
   .then(setLoading(false))
 }
-  
+
+
+/*  
+change two buttons into dropdown?
+
+// handles the dropdown changing based on the select className
+const handleDropdownChange = (e) => {
+  if (e.target.className == 'from-select') {
+    setConvertFrom(getKeyByValue(currencyOptions, e.target.value))
+  }
+  else if (e.target.className == 'to-select') {
+    setConvertTo(getKeyByValue(currencyOptions, e.target.value))
+  }
+}
+*/
   return (
-    <div>
-      <button onClick={() => {fetchPosts('top')}}>Top</button>
-      <button onClick={() => {fetchPosts('new')}}>New</button>
+    <div className='app'>
+      <div className='header'>
+        <h1>Hacker News Clone</h1>
+        <button className='feed-btn' onClick={() => {fetchPosts('top')}}>Top</button>
+        <button className='feed-btn' onClick={() => {fetchPosts('new')}}>New</button>
+      </div>
       <Feed posts={posts} loading={loading}/>
     </div>
   )

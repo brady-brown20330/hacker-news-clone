@@ -1,13 +1,21 @@
 .app {
+  margin: auto;
+  text-align: center;
   width: auto;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: large;
+}
+
+.feed-btn {
+  border: none;
+  background: transparent;
+  color: #9e2a2b;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: large;
 }
 
 .list-container {
-  margin: auto;
-  text-align: center;
-  width: 75%;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: large;
+  width: 100%;
 }
 
 .list {

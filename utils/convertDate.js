@@ -6,13 +6,14 @@ export const ConvertDate = (unix) => {
   let seconds = "0" + date.getSeconds();
   let formattedTime = `${hours}:${minutes.substr(-2)}:${seconds.substr(-2)}`
 
-  // date
+  // list of month names (is there no better way?)
   const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
 
+  // date
   let month = date.getUTCMonth();
   let year = date.getFullYear();
   let utc = date.getUTCDate()
-  return ` this ${utc}th day of ${monthNames[month]}, the year of our lord ${year} at ${formattedTime}`
+  return `${utc} ${monthNames[month]}, the year of our lord ${year} at ${formattedTime}`
 }

@@ -6,7 +6,7 @@ console.log(props.posts)
 if (!props.posts) return <h1>Loading</h1>
 return (
   <div className='list-container'>
-     <h1>Activity Feed:</h1>
+     <div>Activity Feed:</div>
      <ul className='list'>
        {props.posts.map(post => (
            <Post key={post.data.id} postBody={post.data} />
