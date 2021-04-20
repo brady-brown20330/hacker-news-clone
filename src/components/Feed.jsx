@@ -1,20 +1,18 @@
 import React, { useEffect, useState } from "react";
-
+import { Post } from './Post'
 export const Feed = (props) => {
 console.log(props.posts)
 
+if (!props.posts) return <h1>Loading</h1>
+return (
+  <div className='list-container'>
+     <h1>Activity Feed:</h1>
+     <ul className='list'>
+       {props.posts.map(post => (
+           <Post postBody={post} />
+       ))}
+     </ul>
+  </div>
+ )
 
-if (props.loading == true) return <div>loading</div>
-
-else {
-  return (
-    <ul>
-      {posts.map((post) => {
-        return (
-          <li>{post.id}</li>
-        )
-      })}
-    </ul>
-  )
-}
 }
