@@ -9,7 +9,7 @@ return (
      <h1>Activity Feed:</h1>
      <ul className='list'>
        {props.posts.map(post => (
-           <Post postBody={post} />
+           <Post key={post.data.id} postBody={post.data} />
        ))}
      </ul>
   </div>

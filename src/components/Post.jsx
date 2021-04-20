@@ -9,11 +9,11 @@ export const Post = (props) => {
   console.log('post body: ', props.postBody)
   return (
     <li className='list-item'>
-      <a classname='post-link' href={props.postBody.data.url}>{props.postBody.data.title}</a>
+      <a className='post-link' href={props.postBody.url}>{props.postBody.title}</a>
       <div className='post-body'>
-        <div className='post-body-item'>{`by ${props.postBody.data.by}`}</div>
-        <div className='post-body-item'>{`Posted ${ConvertDate(props.postBody.data.time)}`}</div>
-        <div className='post-body-item'>{`${props.postBody.data.descendants} comments`}</div>
+        <div className='post-body-item'>{`by ${props.postBody.by}`}</div>
+        <div className='post-body-item'>{`Posted ${ConvertDate(props.postBody.time)}`}</div>
+        <div className='post-body-item'>{`${props.postBody.descendants} comments`}</div>
       </div>
     </li>
   )
