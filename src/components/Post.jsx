@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ConvertDate } from "../../utils/convertDate";
+import { ConvertDate } from "../../utils/convertDate.js";
 /**
  * EACH POST HAS:
  * post title (links to article)
