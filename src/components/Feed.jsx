@@ -10,14 +10,19 @@ import {
 } from "react-router-dom";
 
 export const Feed = (props) => {
+const [loading, setLoading] = useState(true)
 const [posts, setPosts] = useState(null)
 
+console.log(props)
+
 useEffect(() => {
-  getPosts('top')
-  .then(data => setPosts(data))
-}, [])
+  setPosts(null)
+  fetchPosts(props.type)
+  // .then(setLoading(false))
+}, [props.type])
 
 const fetchPosts = (type) => {
+  console.log('fetching posts...')
   getPosts(type)
   .then(data => {
     setPosts(data)
@@ -25,6 +30,7 @@ const fetchPosts = (type) => {
 }  
 
 if (!posts) return <h1>Loading</h1>
+
 return (
   <div className='list-container'>
      <div>Activity Feed:</div>

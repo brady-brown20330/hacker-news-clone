@@ -6,7 +6,7 @@ import { ConvertDate } from "../../utils/convertDate.js";
  * subtext: post by USER on DATE with X comments
  */
 export const Post = (props) => {
-  console.log('post body: ', props.postBody)
+  // console.log('post body: ', props.postBody)
   return (
     <li className='list-item'>
       <a className='post-link' href={props.postBody.url}>{props.postBody.title}</a>
