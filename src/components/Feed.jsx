@@ -8,8 +8,8 @@ import {
   Link,
   NavLink
 } from "react-router-dom";
-export const Feed = () => {
 
+export const Feed = (props) => {
 const [posts, setPosts] = useState(null)
 
 useEffect(() => {
@@ -27,11 +27,6 @@ const fetchPosts = (type) => {
 if (!posts) return <h1>Loading</h1>
 return (
   <div className='list-container'>
-    <NavLink
-      to='/new'
-      className='nav-link'>
-        New
-    </NavLink>
      <div>Activity Feed:</div>
      <ul className='list'>
        {posts.map(post => (
