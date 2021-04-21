@@ -3,7 +3,6 @@ import { getPosts } from '../utils/api.js';
 import axios from 'axios';
 import {Feed} from './components/Feed.jsx';
 import { Nav } from './components/Nav.jsx';
-import { New } from './components/New.jsx'
 
 import {
   BrowserRouter as Router,
