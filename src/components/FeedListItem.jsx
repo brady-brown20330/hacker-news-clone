@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { ConvertDate } from "../../utils/convertDate.js";
 import {
   BrowserRouter as Router,
+  Link,
   NavLink
 } from "react-router-dom";
 /**
@@ -11,6 +12,7 @@ import {
  */
 export const FeedListItem = (props) => {
   console.log('post body: ', props.postBody)
+  
   if (props.postBody.url) {
     return (
       <li className='list-item'>
@@ -24,11 +26,12 @@ export const FeedListItem = (props) => {
     )
   } else {
     return (
-      <NavLink
-      to='/post'
-      >
-         SHOULD LINK TO ARTICLE {props.postBody.title}
-      </NavLink>
+      <Link to={{
+        pathname: '/post',
+        state: {postBody: props.postBody}
+      }}
+      > POST COMP: {props.postBody.title}
+      </Link>
     )
   }
 }

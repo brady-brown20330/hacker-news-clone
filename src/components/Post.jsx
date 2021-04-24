@@ -1,8 +1,14 @@
 import React from 'react';
+import {useLocation} from 'react-router-dom'
 
 export const Post = (props) => {
-  console.log('props in post: ', props)
+  let location = useLocation();
+
+  console.log('props in post: ', location)
   return (
-    <h1>Hello from the post component</h1>
+    <div>
+      <h1>{location.state.postBody.title}</h1>
+      <div>{location.state.postBody.text}</div>
+    </div>
   )
 }

@@ -13,7 +13,6 @@ import {
 import '../public/App.css'
 
 const App = () => {
-
   return (
     <Router>
       <div className='app'>
